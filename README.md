@@ -9,7 +9,7 @@ A user-authenticated web application integrating Google Gemini 3.6 Flash and Clo
 - **User Authentication**: Firebase Authentication with federated Google Sign-In, eliminating the risks of self-managed credentials.
 - **Data Isolation**: Cloud Firestore configured with strict owner-bound security rules (`/users/{userId}/**`), ensuring complete data privacy across different users.
 - **Server-Side AI Proxy**: Gemini API access is mediated entirely server-side (`/api/gemini/reflect`), protecting the `GEMINI_API_KEY` from client-side bundles.
-- **Model Fallback Ladder**: Dynamic fallback chain (`gemini-3.6-flash` &rarr; `gemini-3.1-flash-lite` &rarr; `gemini-flash-latest` &rarr; `gemini-3.7-flash`) with automated retry on transient upstream capacity issues.
+- **Model Fallback Ladder**: Dynamic fallback chain (`gemini-3.6-flash` → `gemini-3.1-flash-lite` → `gemini-flash-latest` → `gemini-3.7-flash`) with automated retry on transient upstream capacity issues.
 - **Payload & Transaction Hygiene**: Zero-crash payload sanitizer stripping `undefined` attributes, with UI buffer retention and retry mechanisms.
 
 ---
